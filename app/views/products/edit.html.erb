@@ -1,0 +1,138 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+                $('.editable').click(ReLaunchable.Product.setEditOnClick);
+            }
+    )
+</script>
+<!-- Modal -->
+<div id="edit_div" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+      <form>
+        <input type="hidden" name='id' value="<%= @product.id %>">
+        <input class='attr_name' type="hidden" name='attr'>
+        <span></span> <textarea name='val' rows="4" cols="50"> </textarea>
+      </form>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" onclick='ReLaunchable.Product.updateAttrRequest();' data-dismiss="modal" aria-hidden="true">Save changes</button>
+    </div>
+  </div>
+</div>
+
+<div class='editable' data-name='name' data-content='<%= @product.name %>' data-attr='name'>
+  <span>name:</span>
+  <span>
+    <%= @product.name %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>thumbnail:</span>
+  <span>
+    <img src='<%= @product.thumbnail %>'>
+  </span>
+</div>
+
+<!--
+<div class='editable'>
+  <span>short description:</span>
+  <span>
+    <%#= @product.shor_description %>
+  </span>
+</div>
+-->
+
+<div>
+  <span>owner name:</span>
+  <span>
+    <%= @product.owner_name %>
+  </span>
+</div>
+
+<div>
+  <span>additional users names:</span>
+  <span>
+    <%= @product.additional_users_names %>
+  </span>
+</div>
+
+<div class='editable' data-name='site link' data-content='<%= @product.site_url %>' data-attr='site_url'>
+  <span>site link:</span>
+  <span>
+    <%= @product.site_url %>
+  </span>
+</div>
+
+<!-- business summary us -->
+<!-- add to attribute in models - product/comment-->
+<div class='editable' data-name='description' data-content='<%= @product.description %>' data-attr='description'>
+  <span>description:</span>
+  <span>
+    <%= @product.description %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>team description:</span>
+  <span>
+    <%= @product.team_description %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>failure reasons:</span>
+  <span>
+    <%= @product.failure_reasons %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>relauncher expectations:</span>
+  <span>
+    <%= @product.relauncher_expectations %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>past investments:</span>
+  <span>
+    <%= @product.past_investments %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>estimated valuation:</span>
+  <span>
+    <%= @product.estimated_valuation %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>needed investments:</span>
+  <span>
+    <%= @product.needed_investments %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>incorporated:</span>
+  <span>
+    <%= @product.incorporated %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>assets:</span>
+  <span>
+    <%= @product.assets %>
+  </span>
+</div>
+
+<div class='editable'>
+  <span>attachments:</span>
+  <span>
+    <%= @product.attachments %>
+  </span>
+</div>
